@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="cont">
+        <button id="b1"> click here</button>
+        <button id="b2"> click here</button>
+        <button id="b3"> click here</button>
+    </div>
+    <script>
+        const btn = document.querySelectorAll("button");
+
+        btn.forEach((button)=>{
+            button.addEventListener("click",()=>{
+                alert(button.id);
+            })
+        })
+    </script>
+</body>
+</html>

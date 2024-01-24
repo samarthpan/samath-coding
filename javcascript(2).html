@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .cont{
+            height: 800px;
+            width: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .try{
+            
+            height: 600px;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            right: 500px;
+
+        }
+        .box{
+            cursor: grab ;
+            height: 150px;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 0 0 1rem ;
+            font-size: 40px;
+            background-color: rgb(112, 202, 172);
+            border-color: rgb(234, 238, 11);
+        }
+        p{
+            font-size: 50px;
+            text-align: center;
+            text-decoration: underline;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>This is the game of tic tac toe:</p>
+    <div class="cont">
+        <div class="try">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+    </div>
+    <script>
+        let b = document.querySelectorAll('.box');
+
+        let chance0 = true;
+
+        b.forEach((box)=>{
+            box.addEventListener("click",()=>{
+                console.log("button click");
+
+                box.innerText = "x";
+
+                if(chance0){
+                    box.innerText = "x";
+                    chance0 = false;
+                }else{
+                    box.innerText = "0";
+                    chance0 = true;
+                }
+                box.disabled = true;
+            })
+        })
+    </script>
+</body>
+</html>
